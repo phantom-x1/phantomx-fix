@@ -1,7 +1,6 @@
 body {
     padding: 0px;
     margin: 0px;
-    overflow-x: hidden;
 }
 
 html {
@@ -1006,10 +1005,11 @@ footer {
     #navs-s {
       display: flex;
       justify-content: center;
-      position: relative;
+      position: absolute;
       z-index: 10;
       background-color: #292929;
       font-family: "Zilla Slab", serif;
+      width: 400px;
     }
 
     #navs-s ul {
@@ -1060,7 +1060,7 @@ footer {
     #navs-s ul li.show ul.dropdown {
       display: inline-block;
       background-color: #111;
-      margin-left: -150%;
+      margin-left: -151%;
     }
 
     #navs-s ul li ul.dropdown li a {
