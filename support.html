@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phanntomx</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- External Link  -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Zilla+Slab:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="header-container" >
+            <img src="Picsart_25-09-27_23-21-04-127.png">
+            <div class="menu-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="36" height="46" viewBox="0 0 36 36"><path fill="#9a9a9a" d="m33.71 17.29l-15-15a1 1 0 0 0-1.41 0l-15 15a1 1 0 0 0 1.41 1.41L18 4.41l14.29 14.3a1 1 0 0 0 1.41-1.41Z" class="clr-i-outline clr-i-outline-path-1"/><path fill="#9a9a9a" d="M28 32h-5V22H13v10H8V18l-2 2v12a2 2 0 0 0 2 2h7V24h6v10h7a2 2 0 0 0 2-2V19.76l-2-2Z" class="clr-i-outline clr-i-outline-path-2"/><path fill="none" d="M0 0h36v36H0z"/></svg>
+                <div class="mn-1">
+                    <p>Visit us</p>
+                    <span>45, Zee Street, TX</span>
+                </div>
+            </div>
+            <div class="menu-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="39" height="42" viewBox="0 0 19 32"><g fill="#9a9a9a"><path d="M1.5 32h16c.827 0 1.5-.673 1.5-1.5v-29c0-.827-.673-1.5-1.5-1.5h-16C.673 0 0 .673 0 1.5v29c0 .827.673 1.5 1.5 1.5M1 1.5a.5.5 0 0 1 .5-.5h16a.5.5 0 0 1 .5.5v29a.5.5 0 0 1-.5.5h-16a.5.5 0 0 1-.5-.5z"/><path d="M2.5 27h14a.5.5 0 0 0 .5-.5v-21a.5.5 0 0 0-.5-.5h-14a.5.5 0 0 0-.5.5v21a.5.5 0 0 0 .5.5M3 6h13v20H3z"/><circle cx="10" cy="29" r="1"/><path d="M7.5 4h4a.5.5 0 0 0 0-1h-4a.5.5 0 0 0 0 1"/></g></svg>
+                <div class="mn-1">
+                    <p>Call us now</p>
+                    <span>+2347047569065</span>
+                </div>
+            </div>
+            <div class="menu-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="37" height="48" viewBox="0 0 24 24"><path fill="#9a9a9a" d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,20a9,9,0,1,1,9-9A9,9,0,0,1,12,21Z"/><rect width="2" height="7" x="11" y="6" fill="#9a9a9a" rx="1"><animateTransform attributeName="transform" dur="9s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></rect><rect width="2" height="9" x="11" y="11" fill="#9a9a9a" rx="1"><animateTransform attributeName="transform" dur="0.75s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></rect></svg>
+                <div class="mn-1">
+                    <p>Mon - Sun</p>
+                    <span>+24/7</span>
+                </div>
+            </div>
+            <a href="#"><button>GET A FREE QUOTE</button></a>
+        </div>
+    </header>
+    <nav class="navbar sticky-top navbar-expand-lg" id="first-nav">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <form class="d-flex" role="search">
+                <a href="index.html#home"><button class="btn" id="btn1" type="button">HOME</button></a>
+                <a href="index.html#services"><button class="btn" id="btn3" type="button">SERVICES</button></a>
+                <a href="index.html#aboutus"><button class="btn" id="btn2" type="button">ABOUT US</button></a>
+                <a href="index.html#support"><button class="btn" id="btn4" type="button">SUPPORT</button></a>
+            </form>
+            <form class="d-flex" id="flex-2">
+                <div class="search-container" style="display:flex; align-items:center;">
+                        <!-- Search Icon -->
+                       <svg id="searchIcon" idxmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24"><path fill="#f0f0f0" fill-rule="evenodd" d="m16.622 15.172l4.244 4.244l-1.414 1.415l-4.24-4.24a7 7 0 1 1 1.41-1.42zM16 11a5 5 0 1 0-10 0a5 5 0 0 0 10 0"/></svg>
+
+                        <!-- Hidden Search Bar -->
+                        <input type="text" id="searchBox" placeholder="Search your phone here..."
+                        style="display:none; margin-left:10px; padding:6px 10px; border-radius:20px; border:none; outline:none; width:220px;" />
+                </div>
+            </form>
+        </div>
+    </nav>
+    <nav id="navs-s">
+        <ul>
+            <li id="home-menu">
+                <a class="menu-c">MENU</a>
+                <ul class="dropdown">
+                <li><a href="index.html#home">HOME</a></li>
+                <li><a href="index.html#aboutus">ABOUT US</a></li>
+                <li><a href="index.html#support">SUPPORT</a></li>
+                <li><a href="index.html#services">SERVICES</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <body>
+        <div class="body-container">
+            <div class="first-context">
+                <h1 id="sec">Select your device to get started</h1>
+                <h1 id="set">Select your device</h1>
+            </div>
+            <div class="grid-container text-center" id="support-grid" >
+                <a href="fixes.html?device=iphone" class="grid-1">
+                    <svg class="svg_icon_ifs" fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="78px" height="78px">
+                    <path class="blue-fill" d="M43,0H21c-3.866,0-7,3.134-7,7v50c0,3.866,3.134,7,7,7h22c3.866,0,7-3.134,7-7V7C50,3.134,46.866,0,43,0z M48,57c0,2.761-2.239,5-5,5H21c-2.761,0-5-2.239-5-5V7c0-2.761,2.239-5,5-5h22c2.761,0,5,2.239,5,5V57z"></path>
+                    <path class="red-fill" d="M19 55c-.552 0-1 .448-1 1v2c0 .552.448 1 1 1s1-.448 1-1v-2C20 55.448 19.552 55 19 55zM24 55c-.552 0-1 .448-1 1v2c0 .552.448 1 1 1s1-.448 1-1v-2C25 55.448 24.552 55 24 55zM29 55c-.552 0-1 .448-1 1v2c0 .552.448 1 1 1s1-.448 1-1v-2C30 55.448 29.552 55 29 55zM45 55c-.552 0-1 .448-1 1v2c0 .552.448 1 1 1s1-.448 1-1v-2C46 55.448 45.552 55 45 55zM35 55c-.552 0-1 .448-1 1v2c0 .552.448 1 1 1s1-.448 1-1v-2C36 55.448 35.552 55 35 55zM40 55c-.552 0-1 .448-1 1v2c0 .552.448 1 1 1s1-.448 1-1v-2C41 55.448 40.552 55 40 55zM33 6h4c.552 0 1-.448 1-1s-.448-1-1-1h-4c-.552 0-1 .448-1 1S32.448 6 33 6zM27 6h2c.552 0 1-.448 1-1s-.448-1-1-1h-2c-.552 0-1 .448-1 1S26.448 6 27 6zM36.3 32.47c.466-.297.603-.915.306-1.381-.034-.053-.073-.103-.116-.149-2.184-2.492-5.975-2.741-8.467-.557s-2.741 5.975-.557 8.467 5.975 2.741 8.467.557c.198-.173.384-.359.557-.557.364-.415.323-1.047-.092-1.411-.028-.025-.057-.048-.088-.069-1.364-.94-1.708-2.809-.767-4.173.207-.3.467-.56.767-.767L36.3 32.47zM34.24 38.24c-.657.458-1.439.703-2.24.7-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4 .801-.003 1.583.242 2.24.7-1.652 1.886-1.652 4.704 0 6.59V38.24zM33 27.94c.266.002.521-.103.71-.29l1-1c.359-.419.31-1.051-.109-1.41-.374-.321-.927-.321-1.301 0l-1 1c-.387.394-.38 1.027.014 1.414C32.497 27.834 32.743 27.937 33 27.94z"></path>
+                    <path class="black-fill" d="M37.228,10H26.772c-2.072,0-3.954-1.304-4.683-3.244l-2.026-5.404l1.873-0.703l2.026,5.404C24.399,7.218,25.528,8,26.772,8h10.455c1.244,0,2.373-0.782,2.81-1.947l2.026-5.404l1.873,0.703L41.91,6.756C41.182,8.696,39.3,10,37.228,10z"></path></svg>
+                    <p>IPhone</p>
+                </a>
+                <a href="fixes.html?device=tablet" class="grid-2">
+                <svg class="svg_icon_ifs" fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="78px" height="78px">
+                <path class="blue-fill" d="M51,2H13c-2.757,0-5,2.243-5,5v50c0,2.757,2.243,5,5,5h38c2.757,0,5-2.243,5-5V7C56,4.243,53.757,2,51,2z M54,57c0,1.654-1.346,3-3,3H13c-1.654,0-3-1.346-3-3V7c0-1.654,1.346-3,3-3h38c1.654,0,3,1.346,3,3V57z"></path>
+                <path class="red-fill" d="M50,8H14c-1.103,0-2,0.897-2,2v40c0,1.103,0.897,2,2,2h36c1.103,0,2-0.897,2-2V10C52,8.897,51.103,8,50,8z M50,50H14V10h36V50z"></path>
+                <path class="black-fill" d="M17 48c.553 0 1-.448 1-1v-2c0-.552-.447-1-1-1s-1 .448-1 1v2C16 47.552 16.447 48 17 48zM22 48c.553 0 1-.448 1-1v-2c0-.552-.447-1-1-1s-1 .448-1 1v2C21 47.552 21.447 48 22 48zM27 48c.553 0 1-.448 1-1v-2c0-.552-.447-1-1-1s-1 .448-1 1v2C26 47.552 26.447 48 27 48zM32 48c.553 0 1-.448 1-1v-2c0-.552-.447-1-1-1s-1 .448-1 1v2C31 47.552 31.447 48 32 48zM37 48c.553 0 1-.448 1-1v-2c0-.552-.447-1-1-1s-1 .448-1 1v2C36 47.552 36.447 48 37 48zM42 48c.553 0 1-.448 1-1v-2c0-.552-.447-1-1-1s-1 .448-1 1v2C41 47.552 41.447 48 42 48zM47 48c.553 0 1-.448 1-1v-2c0-.552-.447-1-1-1s-1 .448-1 1v2C46 47.552 46.447 48 47 48zM32 54A2 2 0 1 0 32 58 2 2 0 1 0 32 54z"></path>
+                </svg>
+                <p>Tablet</p>
+                </a>
+                <a href="fixes.html?device=google" class="grid-3">
+                    <svg class="svg_icon_ifs" fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="78px" height="78px">
+                    <path class="red-fill" d="M17 44c-.552 0-1 .448-1 1v2c0 .552.448 1 1 1s1-.448 1-1v-2C18 44.448 17.552 44 17 44zM22 44c-.552 0-1 .448-1 1v2c0 .552.448 1 1 1s1-.448 1-1v-2C23 44.448 22.552 44 22 44zM27 44c-.552 0-1 .448-1 1v2c0 .552.448 1 1 1s1-.448 1-1v-2C28 44.448 27.552 44 27 44zM28 56A2 2 0 1 0 28 60 2 2 0 1 0 28 56zM33 4h-4c-.552 0-1 .448-1 1s.448 1 1 1h4c.552 0 1-.448 1-1S33.552 4 33 4zM25 4h-2c-.552 0-1 .448-1 1s.448 1 1 1h2c.552 0 1-.448 1-1S25.552 4 25 4z"></path>
+                    <path class="blue-fill" d="M55.509,28H46v-4.442c0.81,0.52,1.886,0.375,2.545-0.369l3.065-3.46c0.368-0.416,0.547-0.971,0.49-1.523c-0.058-0.562-0.353-1.081-0.808-1.421c-1.601-1.198-3.4-2.119-5.301-2.74C45.992,14.029,46,14.016,46,14V7c0-3.86-3.14-7-7-7H17c-3.86,0-7,3.14-7,7v50c0,3.86,3.14,7,7,7h22c3.86,0,7-3.14,7-7v-8.825c7.058-2.129,11.503-8.272,11.503-16.617V30C57.503,28.897,56.608,28,55.509,28z M50.113,18.402l-3.034,3.48c-1.994-1.438-4.356-2.198-6.832-2.198c-3.72,0-7.027,1.744-9.144,4.437l-3.704-2.778c2.974-3.775,7.62-6.22,12.848-6.22C43.786,15.123,47.283,16.282,50.113,18.402z M42,36h6.015c-1.25,2.909-3.909,4.437-7.768,4.437c-5.275,0-9.566-4.206-9.566-9.376c0-5.17,4.291-9.376,9.566-9.376c1.308,0,2.577,0.258,3.753,0.751V28h-2.006C40.895,28,40,28.897,40,30v4C40,35.103,40.897,36,42,36z M29.181,34.359l-3.893,2.92C24.46,35.367,24,33.266,24,31.062c0-2.947,0.834-5.701,2.262-8.072l3.742,2.807c-0.841,1.576-1.323,3.365-1.323,5.265C28.681,32.208,28.858,33.314,29.181,34.359z M12,7c0-2.757,2.243-5,5-5h22c2.757,0,5,2.243,5,5v1H12V7z M44,57c0,2.757-2.243,5-5,5H17c-2.757,0-5-2.243-5-5v-3h32V57z M44,52H12v-4c0.552,0,1-0.448,1-1v-2c0-0.552-0.448-1-1-1V10h32v3.526c-1.232-0.256-2.489-0.403-3.753-0.403C30.186,13.123,22,21.17,22,31.062c0,6.571,3.624,12.313,9,15.437V47c0,0.552,0.448,1,1,1c0.385,0,0.708-0.224,0.875-0.543C35.132,48.442,37.623,49,40.247,49c1.308,0,2.561-0.115,3.753-0.333V52z M40.247,47c-5.979,0-11.2-3.194-14.021-7.925l3.748-2.811c1.924,3.661,5.803,6.173,10.273,6.173c2.643,0,4.862-0.633,6.575-1.839l3.518,3.015C47.744,45.776,44.292,47,40.247,47z M55.503,31.558c0,4.329-1.36,7.979-3.731,10.649l-3.456-2.962c0.944-1.077,1.644-2.409,2.061-3.99c0.079-0.3,0.015-0.62-0.175-0.865C50.014,34.144,49.721,34,49.411,34H42l-0.006-4h13.516L55.503,31.558z"></path></svg>
+                    <p>Google </p>
+                </a>  
+                <a href="fixes.html?device=phones" class="grid-4">
+                    <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="78px" height="78px">
+                    <path class="path-fill-red" d="M31.946 14A1 1 0 1 0 31.946 16A1 1 0 1 0 31.946 14Z" transform="rotate(-89.89 31.947 15)"></path>
+                    <path class="path-stroke-blue" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" d="M58 66V14c0-1.657-1.343-3-3-3H25c-1.657 0-3 1.343-3 3v52c0 1.657 1.343 3 3 3h30C56.657 69 58 67.657 58 66zM22 19L58 19"></path>
+                    <path class="path-stroke-red" fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M36 15L44 15"></path>
+                    <path class="path-stroke-blue" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" d="M58 59L22 59"></path>
+                    <path class="path-fill-red" d="M40 62A2 2 0 1 0 40 66 2 2 0 1 0 40 62zM27 30A1 1 0 1 0 27 32 1 1 0 1 0 27 30zM27 34A1 1 0 1 0 27 36 1 1 0 1 0 27 34zM27 38A1 1 0 1 0 27 40 1 1 0 1 0 27 38zM27 42A1 1 0 1 0 27 44 1 1 0 1 0 27 42zM27 26A1 1 0 1 0 27 28 1 1 0 1 0 27 26zM27 46A1 1 0 1 0 27 48 1 1 0 1 0 27 46zM27 50A1 1 0 1 0 27 52 1 1 0 1 0 27 50zM27 54A1 1 0 1 0 27 56 1 1 0 1 0 27 54zM27 22A1 1 0 1 0 27 24 1 1 0 1 0 27 22zM16 31A1 1 0 1 0 16 33 1 1 0 1 0 16 31zM16 35A1 1 0 1 0 16 37 1 1 0 1 0 16 35zM16 39A1 1 0 1 0 16 41 1 1 0 1 0 16 39zM16 43A1 1 0 1 0 16 45 1 1 0 1 0 16 43zM16 27A1 1 0 1 0 16 29 1 1 0 1 0 16 27zM16 47A1 1 0 1 0 16 49 1 1 0 1 0 16 47zM16 51A1 1 0 1 0 16 53 1 1 0 1 0 16 51zM16 55A1 1 0 1 0 16 57 1 1 0 1 0 16 55zM16 23A1 1 0 1 0 16 25 1 1 0 1 0 16 23z"></path>
+                    <path class="path-stroke-blue" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" d="M19 16h-5c-1.657 0-3 1.343-3 3v43c0 1.657 1.343 3 3 3h5M61 16h5c1.657 0 3 1.343 3 3v43c0 1.657-1.343 3-3 3h-5"></path></svg>
+                    <p>Phones </p>
+                </a>
+                <a href="fixes.html?device=drone" class="grid-5">
+                    <svg class="svg_icon_ifs" fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="78px" height="78px">
+                    <path class="path-1" fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" d="M26.5 70.5L34.5 70.5M34.5 74.5L26.5 74.5M65.5 70.5L73.5 70.5M73.5 74.5L65.5 74.5"></path>
+                    <path class="path-2" fill="none" stroke="#000000" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" d="M81,29H19.215c-2.611,0-4.943,1.909-5.191,4.509C13.739,36.491,16.077,39,19,39h10c4.418,0,8,3.582,8,8v2c0,1.105,0.895,2,2,2h22c1.105,0,2-0.895,2-2v-2c0-4.418,3.582-8,8-8h9.785c2.611,0,4.943-1.909,5.191-4.509C86.261,31.509,83.923,29,81,29z"></path>
+                    <path class="path-3" fill="none" stroke="#000000" stroke-miterlimit="10" d="M36.72 44.929C28.249 49.621 22.5 58.65 22.5 69v9.5c0 1.104.896 2 2 2s2-.896 2-2V69c0-8.172 4.195-15.38 10.542-19.592M62.958 49.408C69.305 53.62 73.5 60.828 73.5 69v9.5c0 1.104.896 2 2 2s2-.896 2-2V69c0-10.35-5.749-19.379-14.22-24.071"></path>
+                    <path class="path-1" fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" d="M56.5 47.5L59.5 47.5M41.5 47.5L53.5 47.5M32.5 32.5c0 1.105-.895 2-2 2s-2-.895-2-2 0-3 0-3h4C32.5 29.5 32.5 31.971 32.5 32.5zM72.5 32.5c0 1.105-.895 2-2 2s-2-.895-2-2 0-3 0-3h4C72.5 29.5 72.5 31.971 72.5 32.5z"></path>
+                    <path class="path-2" fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M62,85H38c-1.657,0-3-1.343-3-3V66c0-1.657,1.343-3,3-3h24c1.657,0,3,1.343,3,3v16C65,83.657,63.657,85,62,85z"></path>
+                    <path class="path-3" fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" d="M55.99 69.5c-.423-.562-.929-1.053-1.49-1.477M52.5 66.935C51.718 66.657 50.878 66.5 50 66.5c-4.142 0-7.5 3.358-7.5 7.5s3.358 7.5 7.5 7.5c3.264 0 6.034-2.089 7.064-5M57.475 74.5c.011-.166.025-.331.025-.5 0-.878-.159-1.717-.436-2.5"></path>
+                    <path class="path-1" fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" d="M50 69.5A4.5 4.5 0 1 0 50 78.5 4.5 4.5 0 1 0 50 69.5zM57.5 62.5h-15l1.727-3.543c.441-.904 1.234-1.457 2.09-1.457h7.365c.856 0 1.65.553 2.09 1.457L57.5 62.5z"></path>
+                    <path class="path-2" fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" d="M48 70.5A1.5 1.5 0 1 0 48 73.5A1.5 1.5 0 1 0 48 70.5Z"></path>
+                    <path class="path-3" fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M25 29h-6v-2c0-1.105.895-2 2-2h2c1.105 0 2 .895 2 2V29zM82 29h-6v-2c0-1.105.895-2 2-2h2c1.105 0 2 .895 2 2V29zM22 17L22 15M22 25L22 21M79 17L79 15M79 25L79 21"></path>
+                    <path class="path-1" fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" d="M36 17.5c-.734 0-27.266 0-28 0-.828 0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5c.734 0 27.266 0 28 0 .828 0 1.5-.672 1.5-1.5S36.828 17.5 36 17.5zM93 17.5c-.734 0-27.266 0-28 0-.828 0-1.5.672-1.5 1.5s.672 1.5 1.5 1.5c.734 0 27.266 0 28 0 .828 0 1.5-.672 1.5-1.5S93.828 17.5 93 17.5z"></path></svg>
+                    <p>Drone</p>
+                    
+                </a>
+                <a href="fixes.html?device=desktop" class="grid-6">
+                    <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="78px" height="78px">
+                    <path class="path-fill-blue" d="M59,48H5c-1.654,0-3,1.346-3,3v8c0,1.654,1.346,3,3,3h54c1.654,0,3-1.346,3-3v-8C62,49.346,60.654,48,59,48z M60,59c0,0.551-0.448,1-1,1H5c-0.552,0-1-0.449-1-1v-8c0-0.551,0.448-1,1-1h54c0.552,0,1,0.449,1,1V59z"></path>
+                    <path class="path-fill-blue" d="M53 52c-1.654 0-3 1.346-3 3s1.346 3 3 3 3-1.346 3-3S54.654 52 53 52zM53 56.458c-.805 0-1.458-.654-1.458-1.458 0-.804.654-1.458 1.458-1.458s1.458.654 1.458 1.458C54.458 55.804 53.805 56.458 53 56.458zM29 54H9c-.553 0-1 .448-1 1s.447 1 1 1h20c.553 0 1-.448 1-1S29.553 54 29 54zM59 2H5C3.346 2 2 3.346 2 5v38c0 1.654 1.346 3 3 3h54c1.654 0 3-1.346 3-3V5C62 3.346 60.654 2 59 2zM60 43c0 .551-.448 1-1 1H5c-.552 0-1-.449-1-1V5c0-.551.448-1 1-1h54c.552 0 1 .449 1 1V43z"></path>
+                    <path class="path-fill-red" d="M55 8H9C8.447 8 8 8.448 8 9v30c0 .552.447 1 1 1h46c.553 0 1-.448 1-1V9C56 8.448 55.553 8 55 8zM54 38H10V10h44V38zM37 54h-4c-.553 0-1 .448-1 1s.447 1 1 1h4c.553 0 1-.448 1-1S37.553 54 37 54z"></path>
+                    <path class="path-fill-red" d="M17 16c.553 0 1-.448 1-1v-2c0-.552-.447-1-1-1s-1 .448-1 1v2C16 15.552 16.447 16 17 16zM12 16c.553 0 1-.448 1-1v-2c0-.552-.447-1-1-1s-1 .448-1 1v2C11 15.552 11.447 16 12 16zM22 16c.553 0 1-.448 1-1v-2c0-.552-.447-1-1-1s-1 .448-1 1v2C21 15.552 21.447 16 22 16zM27 16c.553 0 1-.448 1-1v-2c0-.552-.447-1-1-1s-1 .448-1 1v2C26 15.552 26.447 16 27 16zM32 16c.553 0 1-.448 1-1v-2c0-.552-.447-1-1-1s-1 .448-1 1v2C31 15.552 31.447 16 32 16zM42 16c.553 0 1-.448 1-1v-2c0-.552-.447-1-1-1s-1 .448-1 1v2C41 15.552 41.447 16 42 16zM37 16c.553 0 1-.448 1-1v-2c0-.552-.447-1-1-1s-1 .448-1 1v2C36 15.552 36.447 16 37 16zM47 16c.553 0 1-.448 1-1v-2c0-.552-.447-1-1-1s-1 .448-1 1v2C46 15.552 46.447 16 47 16zM52 16c.553 0 1-.448 1-1v-2c0-.552-.447-1-1-1s-1 .448-1 1v2C51 15.552 51.447 16 52 16z"></path></svg>
+                    <p>Desktop</p>
+                </a>  
+                <a href="fixes.html?device=laptop" class="grid-7">
+                    <svg class="svg_icon_ifs" fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="78px" height="78px">
+                    <path class="path-1" d="M36 20A1 1 0 1 0 36 22 1 1 0 1 0 36 20zM40 20A1 1 0 1 0 40 22 1 1 0 1 0 40 20zM44 20A1 1 0 1 0 44 22 1 1 0 1 0 44 20zM48 20A1 1 0 1 0 48 22 1 1 0 1 0 48 20zM52 20A1 1 0 1 0 52 22 1 1 0 1 0 52 20zM56 20A1 1 0 1 0 56 22 1 1 0 1 0 56 20zM60 20A1 1 0 1 0 60 22 1 1 0 1 0 60 20zM16 20A1 1 0 1 0 16 22 1 1 0 1 0 16 20zM20 20A1 1 0 1 0 20 22 1 1 0 1 0 20 20zM24 20A1 1 0 1 0 24 22 1 1 0 1 0 24 20zM28 20A1 1 0 1 0 28 22 1 1 0 1 0 28 20zM32 20A1 1 0 1 0 32 22 1 1 0 1 0 32 20zM64 20A1 1 0 1 0 64 22 1 1 0 1 0 64 20zM12 28A1 1 0 1 0 12 30 1 1 0 1 0 12 28zM12 32A1 1 0 1 0 12 34 1 1 0 1 0 12 32zM12 36A1 1 0 1 0 12 38 1 1 0 1 0 12 36zM12 40A1 1 0 1 0 12 42 1 1 0 1 0 12 40zM12 24A1 1 0 1 0 12 26 1 1 0 1 0 12 24zM12 44A1 1 0 1 0 12 46 1 1 0 1 0 12 44zM12 48A1 1 0 1 0 12 50 1 1 0 1 0 12 48zM12 52A1 1 0 1 0 12 54 1 1 0 1 0 12 52zM12 20A1 1 0 1 0 12 22 1 1 0 1 0 12 20zM68 28A1 1 0 1 0 68 30 1 1 0 1 0 68 28zM68 32A1 1 0 1 0 68 34 1 1 0 1 0 68 32zM68 36A1 1 0 1 0 68 38 1 1 0 1 0 68 36zM68 40A1 1 0 1 0 68 42 1 1 0 1 0 68 40zM68 24A1 1 0 1 0 68 26 1 1 0 1 0 68 24zM68 44A1 1 0 1 0 68 46 1 1 0 1 0 68 44zM68 48A1 1 0 1 0 68 50 1 1 0 1 0 68 48zM68 52A1 1 0 1 0 68 54 1 1 0 1 0 68 52zM68 20A1 1 0 1 0 68 22 1 1 0 1 0 68 20z"></path>
+                    <path class="path-2" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" d="M71 59c1.657 0 3-1.343 3-3V18c0-1.657-1.343-3-3-3H9c-1.657 0-3 1.343-3 3v38c0 1.657 1.343 3 3 3M47 59L47 59c0 1.105-.895 2-2 2H35c-1.105 0-2-.895-2-2v0H2v2c0 2.209 1.791 4 4 4h68c2.209 0 4-1.791 4-4v-2H47z"></path></svg>
+                    <p>Laptop</p>
+                </a>
+                <a href="fixes.html?device=watch" class="grid-8">
+                    <svg class="svg_icon_ifs" fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="78px" height="78px">
+                    <path class="path-1" d="M48 55A1 1 0 1 0 48 57 1 1 0 1 0 48 55zM44 55A1 1 0 1 0 44 57 1 1 0 1 0 44 55zM40 55A1 1 0 1 0 40 57 1 1 0 1 0 40 55zM36 55A1 1 0 1 0 36 57 1 1 0 1 0 36 55zM52 55A1 1 0 1 0 52 57 1 1 0 1 0 52 55zM32 55A1 1 0 1 0 32 57 1 1 0 1 0 32 55zM28 55A1 1 0 1 0 28 57 1 1 0 1 0 28 55zM48 23A1 1 0 1 0 48 25 1 1 0 1 0 48 23zM44 23A1 1 0 1 0 44 25 1 1 0 1 0 44 23zM40 23A1 1 0 1 0 40 25 1 1 0 1 0 40 23zM36 23A1 1 0 1 0 36 25 1 1 0 1 0 36 23zM52 23A1 1 0 1 0 52 25 1 1 0 1 0 52 23zM32 23A1 1 0 1 0 32 25 1 1 0 1 0 32 23zM28 23A1 1 0 1 0 28 25 1 1 0 1 0 28 23z"></path>
+                    <path class="path-2" fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M40 36A4 4 0 1 0 40 44 4 4 0 1 0 40 36zM51 36A3 3 0 1 0 51 42 3 3 0 1 0 51 36zM45 29A2 2 0 1 0 45 33 2 2 0 1 0 45 29zM44.5 46.5A2.5 2.5 0 1 0 44.5 51.5 2.5 2.5 0 1 0 44.5 46.5zM35 47A2 2 0 1 0 35 51 2 2 0 1 0 35 47zM35 29A2 2 0 1 0 35 33 2 2 0 1 0 35 29zM30 37A3 3 0 1 0 30 43 3 3 0 1 0 30 37z"></path>
+                    <path class="path-3" d="M52 46A2 2 0 1 0 52 50 2 2 0 1 0 52 46zM28 30A2 2 0 1 0 28 34 2 2 0 1 0 28 30z"></path>
+                    <path class="path-1" fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M28,61h24c3.866,0,7-3.134,7-7V26c0-3.866-3.134-7-7-7H28c-3.866,0-7,3.134-7,7v28C21,57.866,24.134,61,28,61z"></path>
+                    <path class="path-2" fill="none" stroke="#000000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M24.2 20.093c2.783-2.087 4.984-6.638 6.067-9.216.536-1.276 1.694-2.166 3.061-2.39C34.827 8.241 37.051 8 40 8s5.173.241 6.672.487c1.366.224 2.525 1.114 3.061 2.39 1.082 2.577 3.284 7.129 6.067 9.216M55.8 59.907c-2.783 2.087-4.984 6.638-6.067 9.216-.536 1.276-1.694 2.166-3.061 2.39C45.173 71.758 42.949 72 40 72s-5.173-.242-6.672-.487c-1.366-.224-2.525-1.114-3.061-2.39-1.082-2.577-3.284-7.129-6.067-9.216"></path>
+                    <path class="path-3" d="M59 37h1c1.105 0 2-.895 2-2v-5c0-1.105-.895-2-2-2h-1V37zM59 51h1c.552 0 1-.448 1-1v-7c0-.552-.448-1-1-1h-1V51z"></path></svg>
+                    <p>Watch</p>
+                </a>
+                <a href="fixes.html?device=gaming"class="grid-9">
+                    <svg class="svg_icon_ifs" fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="78px" height="78px">
+                    <path class="path-1" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" d="M63,34c-0.5,0-0.964,0.134-1.379,0.35c-0.273-0.372-0.6-0.699-0.971-0.971C60.866,32.964,61,32.5,61,32c0-1.657-1.343-3-3-3s-3,1.343-3,3c0,0.5,0.134,0.964,0.35,1.379c-0.372,0.273-0.699,0.6-0.971,0.971C53.964,34.134,53.5,34,53,34c-1.657,0-3,1.343-3,3s1.343,3,3,3c0.5,0,0.964-0.134,1.379-0.35c0.273,0.372,0.6,0.699,0.971,0.971C55.134,41.036,55,41.5,55,42c0,1.657,1.343,3,3,3s3-1.343,3-3c0-0.5-0.134-0.964-0.35-1.379c0.372-0.273,0.699-0.6,0.971-0.971C62.036,39.866,62.5,40,63,40c1.657,0,3-1.343,3-3S64.657,34,63,34z"></path>
+                    <path class="path-2" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" d="M70 23c0 0-14-4-30-4s-30 4-30 4S6 49 6 56c0 6.075 4.925 11 11 11s11-4.925 11-11h24c0 6.075 4.925 11 11 11s11-4.925 11-11C74 49 70 23 70 23zM40 19L40 12"></path>
+                    <path class="path-3" fill="none" stroke="#000000" stroke-miterlimit="10" stroke-width="2" d="M30 35h-5v-5c0-.552-.448-1-1-1h-2c-.552 0-1 .448-1 1v5h-5c-.552 0-1 .448-1 1v2c0 .552.448 1 1 1h5v5c0 .552.448 1 1 1h2c.552 0 1-.448 1-1v-5h5c.552 0 1-.448 1-1v-2C31 35.448 30.552 35 30 35zM33 60h-3c-1.105 0-2-.895-2-2v-2h7v2C35 59.105 34.105 60 33 60zM17 21v-2c0-1.105.895-2 2-2h5c1.105 0 2 .895 2 2v1M63 21v-2c0-1.105-.895-2-2-2h-5c-1.105 0-2 .895-2 2v1M50 60h-3c-1.105 0-2-.895-2-2v-2h7v2C52 59.105 51.105 60 50 60z"></path>
+                    <path class="path-1" d="M28 51A1 1 0 1 0 28 53 1 1 0 1 0 28 51zM32 51A1 1 0 1 0 32 53 1 1 0 1 0 32 51zM36 51A1 1 0 1 0 36 53 1 1 0 1 0 36 51zM40 51A1 1 0 1 0 40 53 1 1 0 1 0 40 51zM44 51A1 1 0 1 0 44 53 1 1 0 1 0 44 51zM48 51A1 1 0 1 0 48 53 1 1 0 1 0 48 51zM52 51A1 1 0 1 0 52 53 1 1 0 1 0 52 51zM56 51A1 1 0 1 0 56 53 1 1 0 1 0 56 51zM24 51A1 1 0 1 0 24 53 1 1 0 1 0 24 51zM63 62A1 1 0 1 0 63 64 1 1 0 1 0 63 62zM56 55A1 1 0 1 0 56 57 1 1 0 1 0 56 55zM70 55A1 1 0 1 0 70 57 1 1 0 1 0 70 55z"></path>
+                    <path class="path-2" d="M66.5 61.062A1 1 0 1 0 66.5 63.062A1 1 0 1 0 66.5 61.062Z" transform="rotate(-30 66.496 62.065)"></path>
+                    <path class="path-3" d="M56.938 58.5A1 1 0 1 0 56.938 60.5A1 1 0 1 0 56.938 58.5Z" transform="rotate(-30 56.934 59.502)"></path>
+                    <path class="path-1" d="M69.062 58.5A1 1 0 1 0 69.062 60.5A1 1 0 1 0 69.062 58.5Z" transform="rotate(-60 69.063 59.502)"></path>
+                    <path class="path-2" d="M59.5 61.062A1 1 0 1 0 59.5 63.062A1 1 0 1 0 59.5 61.062Z" transform="rotate(-60 59.5 62.064)"></path>
+                    <path class="path-3" d="M17 62A1 1 0 1 0 17 64 1 1 0 1 0 17 62zM10 55A1 1 0 1 0 10 57 1 1 0 1 0 10 55zM24 55A1 1 0 1 0 24 57 1 1 0 1 0 24 55z"></path>
+                    <path class="path-1" d="M20.5 61.062A1 1 0 1 0 20.5 63.062A1 1 0 1 0 20.5 61.062Z" transform="rotate(-30 20.497 62.062)"></path>
+                    <path class="path-2" d="M10.938 58.5A1 1 0 1 0 10.938 60.5A1 1 0 1 0 10.938 58.5Z" transform="rotate(-30 10.935 59.5)"></path>
+                    <path class="path-3" d="M23.062 58.5A1 1 0 1 0 23.062 60.5A1 1 0 1 0 23.062 58.5Z" transform="rotate(-60 23.062 59.502)"></path>
+                    <path class="path-1" d="M13.5 61.062A1 1 0 1 0 13.5 63.062A1 1 0 1 0 13.5 61.062Z" transform="rotate(-60 13.5 62.064)"></path>
+                    </svg>
+                    <p>Gaming</p>
+                </a>
+                <a href="fixes.html?device=microwave" class="grid-10">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="78px" height="78px" viewBox="0 0 24 24"><path fill="#000" d="M3 19V5h18v14zm1-1h16V6H4zm1.885-1.884h8.23V7.885h-8.23zm1-1V8.885h6.23v6.23zm9.961-5.693h1.539V7.885h-1.539zm0 3.346h1.539v-1.538h-1.539zm0 3.347h1.539v-1.539h-1.539zM4 18V6z"/></svg>
+                    <p>Microwave</p>
+                </a>
+            </div>
+        </div>
+    </body>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-1">
+                <img src="Picsart_25-09-27_23-21-04-127.png">
+                <p>
+                    Restore is a U.S based computer repair service <br>
+                    center. Basically we repair all major brands <br>
+                    of PCs, Laptops, Smartphone, Tablet, Flash <br>
+                    Drive and Gaming Console devices issues.
+                </p>
+                <hr>
+                <div class="sv-1">
+                    <a href="#" class="sv">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="rgb(246,147,35)" d="M13.397 20.997v-8.196h2.765l.411-3.209h-3.176V7.548c0-.926.258-1.56 1.587-1.56h1.684V3.127A22 22 0 0 0 14.201 3c-2.444 0-4.122 1.492-4.122 4.231v2.355H7.332v3.209h2.753v8.202z"/></svg>
+                    </a>
+                    <a href="#" class="sv">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="rgb(246,147,35)" d="M12 8.75a3.25 3.25 0 1 0 0 6.5a3.25 3.25 0 0 0 0-6.5"/><path fill="rgb(246,147,35)" fill-rule="evenodd" d="M6.77 3.082a47.5 47.5 0 0 1 10.46 0c1.899.212 3.43 1.707 3.653 3.613a45.7 45.7 0 0 1 0 10.61c-.223 1.906-1.754 3.401-3.652 3.614a47.5 47.5 0 0 1-10.461 0c-1.899-.213-3.43-1.708-3.653-3.613a45.7 45.7 0 0 1 0-10.611C3.34 4.789 4.871 3.294 6.77 3.082M17 6a1 1 0 1 0 0 2a1 1 0 0 0 0-2m-9.75 6a4.75 4.75 0 1 1 9.5 0a4.75 4.75 0 0 1-9.5 0" clip-rule="evenodd"/></svg>
+                    </a>
+                    <a href="#" class="sv">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="rgb(246,147,35)" d="M22.213 5.656a8.4 8.4 0 0 1-2.402.658A4.2 4.2 0 0 0 21.649 4c-.82.488-1.719.83-2.655 1.015a4.182 4.182 0 0 0-7.126 3.814a11.87 11.87 0 0 1-8.621-4.37a4.17 4.17 0 0 0-.566 2.103c0 1.45.739 2.731 1.86 3.481a4.2 4.2 0 0 1-1.894-.523v.051a4.185 4.185 0 0 0 3.355 4.102a4.2 4.2 0 0 1-1.89.072A4.185 4.185 0 0 0 8.02 16.65a8.4 8.4 0 0 1-6.192 1.732a11.83 11.83 0 0 0 6.41 1.88c7.694 0 11.9-6.373 11.9-11.9q0-.271-.012-.541a8.5 8.5 0 0 0 2.086-2.164"/></svg>
+                    </a>
+                    <a href="#" class="sv">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><circle cx="4.983" cy="5.009" r="2.188" fill="rgb(246,147,35)"/><path fill="rgb(246,147,35)" d="M9.237 8.855v12.139h3.769v-6.003c0-1.584.298-3.118 2.262-3.118c1.937 0 1.961 1.811 1.961 3.218v5.904H21v-6.657c0-3.27-.704-5.783-4.526-5.783c-1.835 0-3.065 1.007-3.568 1.96h-.051v-1.66zm-6.142 0H6.87v12.139H3.095z"/></svg>
+                    </a>
+                    <a href="#" class="sv">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><path id="SVGN18ileSR" fill="#fff" d="M0 0h24v24H0z"/></defs><g fill="none"><g clip-path="url(#SVG3qA7XbCf)"><g clip-path="url(#SVG3qA7XbCf)"><path fill="rgb(246,147,35)" d="M0 12c0 5.123 3.211 9.497 7.73 11.218c-.11-.937-.227-2.482.025-3.566c.217-.932 1.401-5.938 1.401-5.938s-.357-.715-.357-1.774c0-1.66.962-2.9 2.161-2.9c1.02 0 1.512.765 1.512 1.682c0 1.025-.653 2.557-.99 3.978c-.281 1.189.597 2.159 1.769 2.159c2.123 0 3.756-2.239 3.756-5.471c0-2.861-2.056-4.86-4.991-4.86c-3.398 0-5.393 2.549-5.393 5.184c0 1.027.395 2.127.889 2.726a.36.36 0 0 1 .083.343c-.091.378-.293 1.189-.332 1.355c-.053.218-.173.265-.4.159c-1.492-.694-2.424-2.875-2.424-4.627c0-3.769 2.737-7.229 7.892-7.229c4.144 0 7.365 2.953 7.365 6.899c0 4.117-2.595 7.431-6.199 7.431c-1.211 0-2.348-.63-2.738-1.373c0 0-.599 2.282-.744 2.84c-.282 1.084-1.064 2.456-1.549 3.235C9.584 23.815 10.77 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0S0 5.373 0 12"/></g></g><defs><clipPath id="SVG3qA7XbCf"><use href="#SVGN18ileSR"/></clipPath></defs></g></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-2">
+                <h4>
+                    Shop Info
+                </h4>
+                <div class="address">
+                    <p>
+                        Address:
+                    </p>
+                    <p>
+                        965 East Avenu, Sector<br>
+                        9 Russel Squire, UK
+                    </p>
+                </div>
+                <hr>
+                <div class="address1">
+                    <p>
+                        Phone:
+                    </p>
+                    <p>
+                        +(234)70 475 690 65 
+                    </p>
+                </div>
+                <div class="address2">
+                    <p>
+                        Email:
+                    </p>
+                    <a href="#"><p>aladejesu02@gmail.com</p></a>
+                </div>
+                <hr>
+                <div class="address3">
+                    <p>
+                        Hours:
+                    </p>
+                    <p>
+                        Mon - Sun (24/7)
+                    </p>
+                </div>
+
+            </div>
+            <div class="footer-3">
+                <h4>Services</h4>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="19" height="15" viewBox="0 0 8 8"><path fill="rgb(246,147,35)" d="M5 1v2H0v1h5v2l3-2.53z"/></svg>Laptop Repair</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="19" height="15" viewBox="0 0 8 8"><path fill="rgb(246,147,35)" d="M5 1v2H0v1h5v2l3-2.53z"/></svg>Smartphone Repair</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="19" height="15" viewBox="0 0 8 8"><path fill="rgb(246,147,35)" d="M5 1v2H0v1h5v2l3-2.53z"/></svg>Tablet Repair</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="19" height="15" viewBox="0 0 8 8"><path fill="rgb(246,147,35)" d="M5 1v2H0v1h5v2l3-2.53z"/></svg>Gadget Repair</p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" width="19" height="15" viewBox="0 0 8 8"><path fill="rgb(246,147,35)" d="M5 1v2H0v1h5v2l3-2.53z"/></svg>Appliances Repair</p>
+            </div>
+            <div class="footer-4">
+                <h4>Newsletter</h4>
+                <p>Signup for regular newsletter and<br>
+                    stay upto date with our latest news
+                </p>
+                <input type="email" placeholder="Your email address" ><button><svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 24 24"><path fill="#fff" d="m10 17l5-5l-5-5z"/></svg></button>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="bottom-1">
+                <p>Copyright &copy; 2025. All rights reserved by <a href="vnicom.com">vnicom.com</a></p>
+            </div>
+            <div class="bottom-2">
+                <a href="#home">Home</a><svg xmlns="http://www.w3.org/2000/svg" width="5" height="5" viewBox="0 0 2048 2048"><path fill="rgb(246,147,35)" d="M128 128h1792v1792H128z"/></svg>
+                <a href="#support">Support</a><svg xmlns="http://www.w3.org/2000/svg" width="5" height="5" viewBox="0 0 2048 2048"><path fill="rgb(246,147,35)" d="M128 128h1792v1792H128z"/></svg>
+                <a href="#services">Services</a><svg xmlns="http://www.w3.org/2000/svg" width="5" height="5" viewBox="0 0 2048 2048"><path fill="rgb(246,147,35)" d="M128 128h1792v1792H128z"/></svg>
+                <a href="#aboutus">About us</a><svg xmlns="http://www.w3.org/2000/svg" width="5" height="5" viewBox="0 0 2048 2048"><path fill="rgb(246,147,35)" d="M128 128h1792v1792H128z"/></svg>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <script>
+        const searchIcon = document.getElementById('searchIcon');
+        const searchBox = document.getElementById('searchBox');
+
+        searchIcon.addEventListener('click', () => {
+            searchIcon.style.display = 'none';   // hide icon
+            searchBox.style.display = 'inline-block'; // show input
+            searchBox.focus();
+        });
+
+        // Close search when pressing ESC or leaving input empty + blur
+        searchBox.addEventListener('blur', () => {
+            if (searchBox.value.trim() === '') {
+            searchBox.style.display = 'none';
+            searchIcon.style.display = 'inline-block';
+            }
+        });
+
+        // Optional: allow ESC to close search
+        searchBox.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+            searchBox.style.display = 'none';
+            searchIcon.style.display = 'inline-block';
+            searchBox.value = '';
+            }
+        });
+
+                // 1️⃣ Select the "Home" menu item by its ID
+        const homeMenu = document.getElementById("home-menu");
+
+        // 2️⃣ When "Home" is clicked, toggle the dropdown visibility
+        homeMenu.addEventListener("click", function() {
+        // 'toggle' means: if it has the class, remove it; if not, add it.
+        homeMenu.classList.toggle("show");
+        });
+
+
+        document.addEventListener("click", function(event) {
+        
+        if (!homeMenu.contains(event.target)) {
+            homeMenu.classList.remove("show");
+        }
+        });
+    </script>
+
+</body>
+</html>

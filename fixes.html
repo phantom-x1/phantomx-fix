@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fix Library — PhantomXFix</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Zilla+Slab:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg-1: #0f1720; --bg-2: #181a1f; --accent: #f69b23; --muted: #9aa4b2; --card-bg: rgba(255,255,255,0.03);
+    }
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg-1),var(--bg-2));color:#e6eef6;font-family:"Montserrat",sans-serif;padding-bottom:60px}
+    header{position:sticky;top:0;backdrop-filter:blur(6px);background:linear-gradient(180deg,rgba(255,255,255,0.03),rgba(255,255,255,0.01));border-bottom:1px solid rgba(255,255,255,0.03);padding:12px 20px}
+    .header-container{max-width:1200px;margin:0 auto;display:flex;gap:16px;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center}
+    .brand img{height:46px;object-fit:contain}
+    .brand .title{font-family:"Zilla Slab",serif;font-weight:700;color:#fff;font-size:20px}
+    .brand .subtitle{font-size:11px;color:var(--muted);margin-top:-4px}
+    .header-info{display:flex;gap:18px;align-items:center}
+    .header-item{display:flex;gap:10px;align-items:center;color:var(--muted);font-size:13px}
+    .cta-quote{background:transparent;border:1.8px solid var(--accent);color:var(--accent);padding:8px 14px;border-radius:10px;font-weight:700;font-size:12px;transition:all .18s}
+    .cta-quote:hover{background:var(--accent);color:#08101a;transform:translateY(-2px);box-shadow:0 6px 18px rgba(246,155,35,.12)}
+    .container-main{max-width:1100px;margin:36px auto;padding:0 18px}
+    .hero{text-align:center;padding:28px 12px 18px;border-radius:12px;margin-bottom:18px;background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01));border:1px solid rgba(255,255,255,0.02)}
+    h2#titleMain{margin:0;font-family:"Zilla Slab",serif;font-size:42px;color:#fff}
+    #subtitleMain{margin:6px 0 0;color:var(--muted);font-weight:600}
+    .chips{display:flex;gap:10px;flex-wrap:wrap;margin:18px 0 12px;align-items:center}
+    .chip{padding:8px 14px;border-radius:999px;background:transparent;color:var(--muted);cursor:pointer;border:1px solid rgba(255,255,255,0.03);transition:all .18s;font-weight:600;font-size:13px}
+    .chip:hover{transform:translateY(-3px);border-color:rgba(246,155,35,.25);color:#fff}
+    .chip.active{background:linear-gradient(90deg,rgba(246,155,35,.14),rgba(246,155,35,.06));color:#081124;border-color:var(--accent);box-shadow:0 6px 20px rgba(246,155,35,.07)}
+    .top-controls{display:flex;gap:12px;align-items:center;margin-bottom:14px;flex-wrap:wrap}
+    #searchBox{min-width:260px;max-width:560px;background:rgba(255,255,255,0.02);border:none;color:#fff;padding:10px 14px;border-radius:10px;box-shadow:0 2px 10px rgba(0,0,0,.35);outline:none;border:1px solid rgba(255,255,255,0.03)}
+    #searchBox:focus{box-shadow:0 10px 30px rgba(246,155,35,.08);transform:translateY(-2px);border-color:rgba(246,155,35,.35)}
+    .result-count{margin-left:auto;color:var(--muted);font-weight:600}
+    #qaList{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .card-fix{background:var(--card-bg);padding:16px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);transition:transform .22s,box-shadow .22s;min-height:120px;display:flex;flex-direction:column;justify-content:space-between}
+    .card-fix:hover{transform:translateY(-8px);box-shadow:0 14px 30px rgba(2,6,23,.6);border-color:rgba(246,155,35,.12)}
+    .qa-icon{background:rgba(255,255,255,0.03);width:48px;height:48px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;color:var(--accent);flex-shrink:0}
+    .qa-title{font-weight:700;font-size:16px;color:#fff}
+    .qa-meta{font-size:12px;color:var(--muted);margin-bottom:8px}
+    .answer{background:rgba(255,255,255,0.02);padding:10px;border-radius:8px;color:#e6eef6;font-size:13px;line-height:1.38}
+    #emptyNote{color:var(--muted);padding:18px 0;display:none;text-align:center}
+    #loadMoreWrap{text-align:center;margin-top:12px}
+    @media (max-width:920px){#qaList{grid-template-columns:1fr}.header-info{display:none}}
+    @media (max-width:520px){#searchBox{width:100%;min-width:0}.top-controls{flex-direction:column;align-items:stretch}.result-count{margin-left:0}header{padding:10px}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="brand">
+        <img src="Picsart_25-09-27_23-21-04-127.png" alt="logo">
+        <div>
+          <div class="title">PhantomXFix</div>
+          <div class="subtitle">Repair Service • Fast • Trusted</div>
+        </div>
+      </div>
+
+      <div class="header-info">
+        <div class="header-item">
+          <i class="bi bi-geo-alt-fill" style="color:var(--muted);font-size:18px"></i>
+          <div><div class="label">Visit us</div><div class="value">45, Zee Street, TX</div></div>
+        </div>
+        <div class="header-item">
+          <i class="bi bi-telephone-fill" style="color:var(--muted);font-size:18px"></i>
+          <div><div class="label">Call us now</div><div class="value">+2347047569065</div></div>
+        </div>
+        <div class="header-item">
+          <i class="bi bi-clock-history" style="color:var(--muted);font-size:18px"></i>
+          <div><div class="label">Open</div><div class="value">Mon - Sun • 24/7</div></div>
+        </div>
+        <a href="#" class="cta-quote">GET A FREE QUOTE</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container-main">
+    <div class="hero">
+      <h2 id="titleMain">Fix Library</h2>
+      <p id="subtitleMain">Solutions and quick fixes</p>
+      <p class="desc">Search device problems, browse by category, and follow step-by-step fixes.</p>
+    </div>
+
+    <div class="chips" id="chipsWrap">
+      <div class="chip active" data-cat="All">All</div>
+      <div class="chip" data-cat="iPhone">iPhone</div>
+      <div class="chip" data-cat="Tablet">Tablet</div>
+      <div class="chip" data-cat="Google">Google</div>
+      <div class="chip" data-cat="Phone">Phone</div>
+      <div class="chip" data-cat="Drone">Drone</div>
+      <div class="chip" data-cat="Desktop">Desktop</div>
+      <div class="chip" data-cat="Laptop">Laptop</div>
+      <div class="chip" data-cat="Watch">Watch</div>
+      <div class="chip" data-cat="Gaming">Gaming</div>
+      <div class="chip" data-cat="Microwave">Microwave</div>
+    </div>
+
+    <div class="top-controls">
+      <input id="searchBox" class="form-control form-control-sm" placeholder="Search fixes...">
+      <button id="searchBtn" class="btn btn-sm btn-outline-light">Search</button>
+      <div class="result-count">Results: <span id="statCount">0</span></div>
+    </div>
+
+    <div id="qaList"></div>
+    <div id="emptyNote">No results found for this category.</div>
+    <div id="loadMoreWrap"></div>
+  </div>
+
+  <!-- include the flat KB first (if you use kb.js). If you don't use kb.js, remove this line -->
+  <script src="kb.js"></script>
+
+  <!-- app code (must come after kb.js) -->
+  <script src="app.js"></script>
+
+  <!-- bootstrap bundle last -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
