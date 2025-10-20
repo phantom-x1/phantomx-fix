@@ -1036,7 +1036,6 @@ footer {
 
 
     #navs-s ul li a.menu-c {
-     padding-top: 20px;
       color: #fff;
       max-width: 100%;
       padding-bottom: 0px;
@@ -1052,7 +1051,7 @@ footer {
       left: 0;
       list-style: none;
       min-width: 10em;
-      width: 380px;
+      width: 370px;
       margin-top: 15px;
       background-color: #242222;
     }
@@ -1066,10 +1065,9 @@ footer {
     #navs-s ul li ul.dropdown li a {
     padding-top: 20px;
       color: #fff;
-      width: 380px;
+      width: 370px;
       text-align: left;
       background-color: #292929;
-      padding: 10px;
       border-radius: 0px;
     }
 
