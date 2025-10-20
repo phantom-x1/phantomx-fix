@@ -1004,6 +1004,8 @@ footer {
 
 
 
+
+
 }
 
 @media (min-width:993px) { 
@@ -1017,6 +1019,14 @@ footer {
 
     .text-context2 h3#h-3 {
        display: none;
+    }
+
+    #navs-s {
+        display: none;
+    }
+
+    .first-context h1#set {
+        display: none;
     }
 
 }
