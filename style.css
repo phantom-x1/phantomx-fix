@@ -997,15 +997,8 @@ footer {
     }
 
     #navs-s ul li ul.dropdown li a:hover {
-    background-color: rgb(255, 179, 38);
+        background-color: rgb(255, 179, 38);
     }
-
-
-
-
-
-
-
 }
 
 @media (min-width:993px) { 
