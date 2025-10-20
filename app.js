@@ -128,7 +128,7 @@ function createCardElement(item) {
     <div id="ans_${item.id}" class="mt-3 answer" style="display:none;">${escapeHtml(item.a)}</div>
   `;
 
-  // show/hide answer
+  
   const showBtn = wrap.querySelector('.btn-show');
   const ansEl = wrap.querySelector(`#ans_${item.id}`);
   showBtn && showBtn.addEventListener('click', (e) => {
@@ -137,14 +137,14 @@ function createCardElement(item) {
     e.currentTarget.textContent = nowVisible ? 'Show' : 'Hide';
   });
 
-  // copy button
+  
   const copyBtn = wrap.querySelector('[data-copy]');
   copyBtn && copyBtn.addEventListener('click', (e) => {
     const txt = decodeURIComponent(e.currentTarget.getAttribute('data-copy'));
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(txt).then(() => showToast('Answer copied to clipboard')).catch(() => showToast('Copy failed'));
     } else {
-      // Fallback method
+      
       try {
         const ta = document.createElement('textarea');
         ta.value = txt;
@@ -170,13 +170,13 @@ function render() {
   const q = (searchBox && searchBox.value) ? searchBox.value.trim() : '';
   const list = filterListByCategoryAndSearch(APP_KB, activeCat, q);
 
-  // determine visible slice (load-more only when NOT searching)
+  
   const key = activeCat || 'All';
   if (!(key in showCount)) showCount[key] = STEP;
   let visible = list;
   if (!q) visible = list.slice(0, showCount[key]);
 
-  // update empty note & list content
+  
   qaList.innerHTML = '';
   if (visible.length === 0) {
     if (emptyNote) emptyNote.style.display = 'block';
@@ -185,7 +185,7 @@ function render() {
     visible.forEach(item => qaList.appendChild(createCardElement(item)));
   }
 
-  // load more button
+  
   if (loadMoreWrap) loadMoreWrap.innerHTML = '';
   if (!q && list.length > visible.length && loadMoreWrap) {
     const more = document.createElement('button');
@@ -199,11 +199,11 @@ function render() {
     loadMoreWrap.appendChild(more);
   }
 
-  // stats: how many items in matching list
+  
   statCount.textContent = list.length;
 }
 
-// ---------- Chip (category) setup ----------
+
 function initChips() {
   const chipEls = Array.from(document.querySelectorAll('.chip'));
   if (!chipEls.length) return;
@@ -218,7 +218,7 @@ function initChips() {
       if (searchBox) searchBox.value = '';
       render();
 
-      // update URL param (optional)
+      
       try {
         const u = new URL(window.location.href);
         if (activeCat && activeCat !== 'All') u.searchParams.set('device', activeCat.toLowerCase());
@@ -228,7 +228,7 @@ function initChips() {
     });
   });
 
-  // check URL param device= to preselect category if present
+
   const dev = (getUrlParam('device') || '').toLowerCase();
   if (dev) {
     const match = chipEls.find(c => String(c.dataset.cat || '').trim().toLowerCase() === dev);
@@ -238,7 +238,7 @@ function initChips() {
     }
   }
 
-  // default: select "All"
+  
   const allChip = chipEls.find(c => String(c.dataset.cat || '').trim() === 'All');
   if (allChip) {
     allChip.classList.add('active');
@@ -247,7 +247,7 @@ function initChips() {
   }
 }
 
-// ---------- Wire events (buttons and keyboard) ----------
+
 function wireEvents() {
   if (searchBtn) {
     searchBtn.addEventListener('click', () => {
@@ -264,13 +264,9 @@ function wireEvents() {
         render();
       }
     });
-
-    // optional: when search box loses focus and is empty, hide it and show icon (if you have that behavior)
-    // searchBox.addEventListener('blur', () => { ... });
   }
 }
 
-// ---------- Start app when DOM is ready ----------
 document.addEventListener('DOMContentLoaded', () => {
   chipsWrap = document.getElementById('chipsWrap');
   qaList = document.getElementById('qaList');
@@ -284,6 +280,5 @@ document.addEventListener('DOMContentLoaded', () => {
   wireEvents();
   render();
 
-  // expose for debugging in console
   window.FixLib = { KB: APP_KB, render, _rawCount: APP_KB.length };
 });

@@ -44,7 +44,7 @@
                     <span>+24/7</span>
                 </div>
             </div>
-            <a href="#"><button>GET A FREE QUOTE</button></a>
+            <a href="#" class="quote-btn"><button>GET A FREE QUOTE</button></a>
         </div>
     </header>
     <nav class="navbar sticky-top navbar-expand-lg" id="first-nav">
@@ -344,6 +344,20 @@
         </div>
 
     </section>
+    <div id="quote-popup" class="quote-popup">
+        <div class="quote-content">
+            <span class="close-btn">&times;</span>
+            <h2>Free Quote</h2>
+            <p>
+            Need your phone fixed fast? 
+            Tell us your issue and we’ll give you a free repair estimate instantly no hidden charges.  
+            Contact us through <strong>WhatsApp or Email</strong> to get started!
+            </p>
+            <a href="https://wa.me/234XXXXXXXXXX" target="_blank">
+            <button class="send-btn">Chat on WhatsApp</button>
+            </a>
+        </div>
+    </div>
     <footer>
         <div class="footer-container">
             <div class="footer-1">
@@ -457,6 +471,24 @@
         if (!homeMenu.contains(event.target)) {
             homeMenu.classList.remove("show");
         }
+        });
+
+        
+       const openBtn = document.querySelector('.quote-btn');
+        const popup = document.getElementById('quote-popup');
+        const closeBtn = document.querySelector('.close-btn');
+
+        openBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            popup.classList.add('active');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            popup.classList.remove('active');
+        });
+
+        window.addEventListener('click', (e) => {
+            if (e.target === popup) popup.classList.remove('active');
         });
     </script>
 

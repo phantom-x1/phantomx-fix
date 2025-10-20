@@ -1,13 +1,12 @@
 body {
     padding: 0px;
     margin: 0px;
+    overflow-x: hidden;
 }
 
-
-
 html {
-  scroll-behavior: smooth;   /* smooth scrolling */
-  scroll-padding-top: 60px;  /* height of your navbar */
+  scroll-behavior: smooth; 
+  scroll-padding-top: 60px;  
 }
 
 
@@ -633,12 +632,89 @@ hr {
   padding: 0 18px;
 }
 
+   .quote-popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: flex-end; 
+  z-index: 999;
+}
+
+.quote-popup.active {
+  display: flex;
+}
+
+.quote-content {
+  background: #222;
+  color: #fff;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px 20px 0 0;
+  text-align: center;
+  padding: 2em;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+  font-family: "Zilla Slab", serif;
+  animation: slideUp 0.4s ease;
+  position: relative;
+}
+
+.quote-content h2 {
+  color: rgb(255,179,38);
+  margin-bottom: 0.6em;
+}
+
+.quote-content p {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 1.5em;
+}
+
+.send-btn {
+  background: rgb(255,179,38);
+  color: #111;
+  padding: 0.7em 1.5em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.send-btn:hover {
+  background: #ffa500;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 
 .first-context h1 {
   text-align: center;
   font-weight: 700;
   margin: 30px 0px 30px 0px;
-  color: #d78b00; /* warm brand accent */
+  color: #d78b00; 
   letter-spacing: -0.2px;
   font-size: 40px ;
   font-family: "Zilla Slab", serif;
@@ -723,7 +799,7 @@ hr {
 
 .grid-1, .grid-2, .grid-3, .grid-4, .grid-5,
 .grid-6, .grid-7, .grid-8, .grid-9, .grid-10 {
-  position: relative; /* for pseudo element */
+  position: relative; 
   padding-top: 18px;
 }
 
@@ -958,11 +1034,11 @@ footer {
       text-align: center;
     }
 
-    /* Active link */
+
     #navs-s ul li a.menu-c {
      padding-top: 20px;
       color: #fff;
-      width: 380px;
+      max-width: 100%;
       padding-bottom: 0px;
       text-align: center;
       font-size: larger;
@@ -984,6 +1060,7 @@ footer {
     #navs-s ul li.show ul.dropdown {
       display: inline-block;
       background-color: #111;
+      margin-left: -150%;
     }
 
     #navs-s ul li ul.dropdown li a {
@@ -999,6 +1076,7 @@ footer {
     #navs-s ul li ul.dropdown li a:hover {
         background-color: rgb(255, 179, 38);
     }
+
 }
 
 @media (min-width:993px) { 
