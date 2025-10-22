@@ -24,6 +24,7 @@ html {
 .menu-1, .menu-2, .menu-3 {
     display: flex;
     font-family: "Montserrat", sans-serif;
+    font-weight: 600;
 }
 
 .menu-1 p,
@@ -38,6 +39,7 @@ html {
 .menu-2 span,
 .menu-3 span {
     font-weight: 600;
+    font-size: 14px;
 }
 
 .mn-1 span {
@@ -569,6 +571,7 @@ hr {
     background-color: rgb(220, 140, 0);
     border: none;
     padding: 4px;
+    margin-left: -20px;
 }
 
 .footer-4 button:hover {
