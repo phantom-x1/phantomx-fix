@@ -121,14 +121,12 @@ function createCardElement(item) {
         <div class="qa-meta">${escapeHtml(item.cat)} · ${escapeHtml((item.tags||[]).join(', '))}</div>
       </div>
       <div class="text-end">
-        <button class="btn btn-sm btn-outline-light me-2" data-copy="${encodeURIComponent(item.a)}">Copy</button>
         <button class="btn btn-sm btn-outline-secondary btn-show" data-id="${item.id}">Show</button>
       </div>
     </div>
     <div id="ans_${item.id}" class="mt-3 answer" style="display:none;">${escapeHtml(item.a)}</div>
   `;
 
-  
   const showBtn = wrap.querySelector('.btn-show');
   const ansEl = wrap.querySelector(`#ans_${item.id}`);
   showBtn && showBtn.addEventListener('click', (e) => {
@@ -137,29 +135,7 @@ function createCardElement(item) {
     e.currentTarget.textContent = nowVisible ? 'Show' : 'Hide';
   });
 
-  
-  const copyBtn = wrap.querySelector('[data-copy]');
-  copyBtn && copyBtn.addEventListener('click', (e) => {
-    const txt = decodeURIComponent(e.currentTarget.getAttribute('data-copy'));
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(txt).then(() => showToast('Answer copied to clipboard')).catch(() => showToast('Copy failed'));
-    } else {
-      
-      try {
-        const ta = document.createElement('textarea');
-        ta.value = txt;
-        ta.style.position = 'fixed';
-        ta.style.left = '-9999px';
-        document.body.appendChild(ta);
-        ta.select();
-        document.execCommand('copy');
-        ta.remove();
-        showToast('Answer copied to clipboard');
-      } catch (err) {
-        showToast('Copy not supported');
-      }
-    }
-  });
+
 
   return wrap;
 }
